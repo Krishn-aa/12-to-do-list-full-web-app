@@ -1,0 +1,26 @@
+<div class="side-panel">
+  <button (click)="openAddTask()" class="add-task-btn">
+    Add Task
+    <img src="/assets/add-task-btn.svg" alt="img" />
+  </button>
+
+  <div routerLink="dashboard" routerLinkActive="active">DashBoard</div>
+  <div routerLink="active" routerLinkActive="active">Active</div>
+  <div routerLink="completed" routerLinkActive="active">Completed</div>
+  <div routerLink="backlog" routerLinkActive="active">Backlog</div>
+</div>
+
+<app-add-task [isOpen]="isModalOpen" (close)="closeAddTask()"></app-add-task>
+
+<div class="top-panel" id="topPanel" [ngClass]="{ show: isMenuOpen }">
+  <div class="selected-menu" (click)="toggleMenu()">
+    <div>{{ selectedMenu }}</div>
+    <img src="/assets/drop-down.svg" alt="" />
+  </div>
+  <div class="menu" *ngIf="isMenuOpen">
+    <div routerLink="dashboard" *ngIf="selectedMenu!='Dashboard'" (click)="selectMenu('Dashboard')">Dashboard</div>
+    <div routerLink="active" *ngIf="selectedMenu!='Active'" (click)="selectMenu('Active')">Active</div>
+    <div routerLink="completed" *ngIf="selectedMenu!='Completed'" (click)="selectMenu('Completed')">Completed</div>
+    <div routerLink="backlog" *ngIf="selectedMenu!='Backlog'" (click)="selectMenu('Backlog')">Backlog</div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.backlog-main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5vw;
+}
+
+.backlog-task-list{
+  height: 60vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.backlog-task-list::-webkit-scrollbar {
+  background-color: transparent;
+  width: 3px;
+}
+
+.backlog-task-list::-webkit-scrollbar-thumb {
+  background-color: #edb046;
+}
+
+mat-form-field{
+  margin-bottom: 1rem;
+}

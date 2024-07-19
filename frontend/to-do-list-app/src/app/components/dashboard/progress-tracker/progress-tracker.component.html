@@ -1,0 +1,15 @@
+<div class="progress-tracker-container">
+  <img src="assets/progress-task-active.svg" alt="" />
+  <div>
+    <p class="progress-tracker-percent">{{ activeProgress }}%</p>
+    <p>Completed task</p>
+  </div>
+</div>
+
+<div class="progress-tracker-container completed">
+  <img src="assets/progress-task-completed.svg" alt="" />
+  <div>
+    <p class="progress-tracker-percent">{{ 100 - activeProgress }}%</p>
+    <p>Active task</p>
+  </div>
+</div>

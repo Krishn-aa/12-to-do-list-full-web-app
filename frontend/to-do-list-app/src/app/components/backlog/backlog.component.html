@@ -1,0 +1,18 @@
+<div class="backlog-main">
+  <app-task-header></app-task-header>
+
+  <mat-form-field  class="example-full-width">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" (dateChange)="scrollToSelectedDate($event)" />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div class="backlog-task-list">
+    <div *ngFor="let item of taskListByDate">
+      <p [id]="item.date | customDate">{{ item.date | customDate }}</p>
+      <app-task-list [taskList]="item.tasks"></app-task-list>
+    </div>
+  </div>
+</div>

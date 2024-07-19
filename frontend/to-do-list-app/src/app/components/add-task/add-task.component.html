@@ -1,0 +1,22 @@
+<div class="modal-container flex" *ngIf="isOpen">
+  <div class="add-task-modal flex-column">
+    <input
+      type="text"
+      placeholder="Add title"
+      [(ngModel)]="title"
+      name="title"
+      maxlength="50"
+      minlength="3"
+    />
+    <textarea
+      placeholder="Add description"
+      [(ngModel)]="description"
+      name="description"
+      maxlength="200"
+    ></textarea>
+    <div class="modal-buttons">
+      <button class="cancel-button" (click)="closeModal()">Cancel</button>
+      <button class="save-button" (click)="handleForm()">Save</button>
+    </div>
+  </div>
+</div>

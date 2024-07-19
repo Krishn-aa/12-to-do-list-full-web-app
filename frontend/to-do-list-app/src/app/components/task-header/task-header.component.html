@@ -1,0 +1,12 @@
+<div class="task-header">
+  <p class="task-list-header-title"><span *ngIf="activePage!='/backlog'">Today's </span>{{ title | parseUrl }} Tasks</p>
+  <div>
+    <span
+      *ngIf="activePage === 'dashboard'"
+      class="task-list-header-delete"
+      (click)="deleteAll()"
+      >Delete All</span
+    >
+    <span>{{ formattedDate }}</span>
+  </div>
+</div>

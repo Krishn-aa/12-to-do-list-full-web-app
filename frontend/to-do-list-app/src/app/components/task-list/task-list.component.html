@@ -1,0 +1,65 @@
+<div class="task-lists">
+  <div
+    *ngFor="let task of taskList"
+    [ngClass]="{ active: task.isCompleted == true }"
+    class="task"
+    (click)="toggleDescription(task.id!)"
+  >
+    
+    <img
+      [src]="getCheckboxSrc(task)"
+      (click)="toggleCompletionStatus($event, task)"
+      [ngClass]="{ active: task.isCompleted === true }"
+      alt="checkbox"
+    />
+    <p>{{ task.title }}</p>
+    <div
+      class="task-description"
+      [ngClass]="{
+        active: task.isCompleted === true,
+        hide: !descriptionsVisible[task.id!]
+      }"
+    >
+      <div class="task-title">
+        <p title="{{task.title}}" class="title">{{ task.title }}</p>
+        <p class="time" [ngClass]="{ active: task.isCompleted }">
+          {{ getElapsedTime(task.createdOn!,task.completedOn!) }}
+        </p>
+      </div>
+      <div class="description">
+        <p>Description</p>
+        <p>{{ task.description }}</p>
+      </div>
+      <div class="task-customization">
+        <div>
+          <img
+            [src]="getCheckboxSrc(task)"
+            (click)="toggleCompletionStatus($event, task)"
+            class="checkbox icon"
+          />
+        </div>
+        <div>
+          <img
+            *ngIf="!task.isCompleted"
+            src="assets/edit-btn.svg"
+            (click)="editTask(task)"
+            alt="edit"
+            class="edit icon"
+          />
+          <img
+            (click)="deleteTask(task.id!)"
+            [src]="getDeleteSrc(task)"
+            alt="delete"
+            class="delete icon"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-add-task
+      [isOpen]="isModalOpen"
+      (close)="closeAddTask()"
+      [isUpdate]="true"
+      [defaultData]="taskToEdit"
+    ></app-add-task>
+</div>

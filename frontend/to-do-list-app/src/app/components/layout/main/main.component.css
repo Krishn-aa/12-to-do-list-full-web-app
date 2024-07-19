@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+}
+
+app-header {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+app-sidepanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  app-header {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+  }
+}

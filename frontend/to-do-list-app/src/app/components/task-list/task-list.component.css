@@ -1,0 +1,110 @@
+.task-lists {
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+.task {
+  display: flex;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
+  gap: 2%;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.task.active {
+  background-color: #edb046;
+}
+
+.task-description.active {
+  background-color: #edb046;
+}
+
+.task-list {
+  position: relative;
+}
+
+.task-title {
+  margin-bottom: 5vh;
+}
+
+.task-description {
+  position: absolute;
+  right: 0;
+  top: 115%;
+  width: 22vw;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px 0px #0000001a;
+  padding: 2vw;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 0.5vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time {
+  font-size: 0.9vw;
+  color: #a2a2a2c8;
+}
+
+.time.active {
+  color: #ba5112;
+}
+
+.description p:first-child {
+  font-weight: 600;
+  margin-bottom: 1.2vh;
+}
+
+.description p:last-child {
+  font-size: 1vw;
+}
+
+.task-customization {
+  margin-top: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-customization .icon {
+  scale: 0.9;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .task {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .task-description {
+    width: 90%;
+    max-width: 350px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .time {
+    font-size: 0.8rem;
+  }
+
+  .description p:last-child {
+    font-size: 0.9rem;
+  }
+}

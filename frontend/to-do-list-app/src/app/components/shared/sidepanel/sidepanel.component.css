@@ -1,0 +1,116 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+}
+
+app-header {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+app-sidepanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-panel {
+  width: 100%;
+  margin-top: 12%;
+}
+
+.side-panel div {
+  width: 100%;
+  margin: 5% 0;
+  padding: 3% 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.side-panel div:hover {
+  background-color: #edb046;
+}
+
+.add-task-btn {
+  font-family: "Lexend", sans-serif;
+  margin: 3% auto;
+  background: #fff;
+  border: none;
+  display: flex;
+  gap: 5%;
+  width: 10rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  text-wrap: nowrap;
+  font-weight: 500;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  margin-bottom: 20%;
+  cursor: pointer;
+}
+
+.side-panel div.active,
+.side-panel div:hover {
+  background-color: #edb046;
+}
+
+.add-task-btn img {
+  height: 1.5rem;
+}
+
+.top-panel {
+  display: none;
+  width: 86vw;
+  flex-direction: column;
+  box-shadow: 2px 4px 8px 0px #0000001A;
+}
+
+.top-panel.show .menu {
+  display: flex;
+}
+
+.top-panel .selected-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #edb046;
+  font-size: 0.8rem;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.top-panel .menu {
+  display: none;
+  flex-direction: column;
+  border-top: none;
+  width: 100%;
+  border-radius: 0 0 6px 6px;
+}
+
+.top-panel .menu div {
+  padding: 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.top-panel .menu div:hover {
+  background-color: #edb046;
+}
+
+@media (max-width: 768px) {
+  .side-panel {
+    display: none;
+  }
+
+  .top-panel {
+    display: block;
+  }
+  .top-panel .menu div{
+    padding: 0.7rem;
+  }
+}

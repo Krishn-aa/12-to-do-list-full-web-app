@@ -1,0 +1,60 @@
+.welcome-banner-greet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+    border-radius: 10px;
+  }
+  
+  .welcome-banner-greet-name {
+    font-weight: 700;
+    font-size: 3.5vw;
+  }
+  
+  .welcome-banner-greet-message {
+    font-size: 1.3vw;
+    margin-top: 1%;
+  }
+  
+  img {
+    position: absolute;
+    height: 13rem;
+    right: 0;
+    top: 10%;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 944px) {
+    .welcome-banner-greet-name {
+      font-size: 1.6rem;
+    }
+  
+    .welcome-banner-greet-message {
+      font-size:1.4vw;
+    }
+  
+    img {
+      height: 10rem;
+      top: 30%;
+      
+    }
+  }
+  
+  @media (max-width: 580px) {
+    .welcome-banner-greet{
+      padding: 0% 3%;
+    }
+    .welcome-banner-greet-name {
+      font-size:4vw;
+    }
+    
+    .welcome-banner-greet-message {
+      font-size:1.8vw;
+    }
+  
+    img {
+      height: 8rem;
+      top: 20%;
+    }
+  }
+  

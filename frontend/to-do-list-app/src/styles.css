@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+}
+
+button {
+  font-family: "Lexend", sans-serif;
+}
+input {
+  font-family: "Lexend", sans-serif;
+}
+
+app-task-list {
+  margin-right: 1rem;
+  border-radius: 5px;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 70vh;
+}
+app-task-list::-webkit-scrollbar {
+  background-color: transparent;
+  width: 3px;
+}
+app-task-list::-webkit-scrollbar-thumb {
+  background-color: #edb046;
+}

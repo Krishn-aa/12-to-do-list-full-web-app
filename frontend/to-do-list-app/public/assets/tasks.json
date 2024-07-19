@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Go to the gym",
+    "description": "This is task1",
+    "status": 1,
+    "userId": "1",
+    "createdOn": "2023-06-01T08:30:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Prepare presentations",
+    "description": "This is task2",
+    "status": 0,
+    "userId": "2",
+    "createdOn": "2023-06-02T10:00:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Get nails and hair done",
+    "description": "This is task3",
+    "status": 1,
+    "userId": "3",
+    "createdOn": "2023-06-03T12:45:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Pick up the kids",
+    "description": "This is task4",
+    "status": 1,
+    "userId": "1",
+    "createdOn": "2023-06-04T15:30:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Buy monthly groceries",
+    "description": "This is task5",
+    "status": 1,
+    "userId": "2",
+    "createdOn": "2023-06-05T18:00:00Z"
+  }
+]

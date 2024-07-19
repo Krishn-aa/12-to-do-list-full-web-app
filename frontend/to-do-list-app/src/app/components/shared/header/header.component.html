@@ -1,0 +1,13 @@
+<div class="header-app-title">To-Do App</div>
+<div class="header-content">
+  <div class="header-active-window-title">{{ activePage | parseUrl }}</div>
+  <app-add-task [isOpen]="isModalOpen" (close)="closeAddTask()"></app-add-task>
+  <button (click)="openAddTask()" class="add-task-btn">
+    Add Task
+    <img src="/assets/add-task-btn.svg" alt="img" />
+  </button>
+  <button class="sign-out-btn" (click)="signOut()">
+    Sign out
+    <img src="/assets/sign-out-btn.svg" alt="" />
+  </button>
+</div>

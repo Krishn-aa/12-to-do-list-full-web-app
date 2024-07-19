@@ -1,0 +1,46 @@
+<div class="auth-main">
+  <div class="auth-container sign-up">
+    <div class="auth-header">
+      <p class="auth-header-title sign-up">To-Do App</p>
+      <p class="auth-header-description">
+        Start organizing your life day by day
+      </p>
+    </div>
+
+    <div class="auth-credential-input">
+      <form
+        #authForm="ngForm"
+        (ngSubmit)="
+          registerUser(authForm.value.username, authForm.value.password)
+        "
+        class="auth-form"
+      >
+        <input
+          type="text"
+          class="auth-input-username"
+          placeholder="Username"
+          name="username"
+          ngModel
+          required
+        />
+        <input
+          [type]= "type"
+          class="auth-input-password"
+          placeholder="Password"
+          name="password"
+          ngModel
+          required
+        />
+        <div class="auth-submit">
+          <button type="submit" class="auth-submit-btn sign-up-btn">Sign Up</button>
+        </div>
+        <img class="eye-btn" src="assets/eye-btn.svg" (click)="togglePasswordView()" alt="" />
+      </form>
+    </div>
+
+    <p class="auth-login-redirection">
+      Already have an account? Log in
+      <a routerLink="/signin" class="redirect-to-auth">here</a>
+    </p>
+  </div>
+</div>
